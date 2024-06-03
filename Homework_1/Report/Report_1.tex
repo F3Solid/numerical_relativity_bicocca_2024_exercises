@@ -50,7 +50,7 @@ The solution of the \acrshort{aeq} is a translation of the initial solution
     u(t,\ x) = u(t = 0,\ x - at)
 \end{equation}
 
-Since the \acrshort{aeq} doesn't affect the shape and magnitude of the solution
+Since the \acrshort{aeq} doesn't affect the shape and amplitude of the solution
 as time advance, we expect its norm to be conserved. Therefore we will use the
 \(L_2\) norm to test the stability of the numerical methods used to evolve the
 solution. On a discrete space-time grid it can be written as:
@@ -110,12 +110,12 @@ Figure \ref{fig:ftcs_l2_tot}.
 The \acrshort{laxf} method is conditionally stable; the stability condition is
 given by \(\Delta t = C_f \frac{\Delta x}{\abs{a}}\) with \(C_f \leq 1\). The
 derivation of this method is achieved with the introduction of a
-\textit{dissipative} term in the \acrshort{aeq}; this means that the magnitude
+\textit{dissipative} term in the \acrshort{aeq}; this means that the amplitude
 of the solution decreases in time depending on the Courant factor and the
 number of grid points.
 
 As can be seen from Figure \ref{fig:laxf_if_tot}, increasing the resolution of
-the grid or the Courant factor helps in preserving the initial magnitude of the
+the grid or the Courant factor helps in preserving the initial amplitude of the
 solution. These features are also present in the evolution of the \(L_2\) norm
 (Figure \ref{fig:laxf_l2_tot}). Further comments are in section
 \ref{sec:step_laxf}.
@@ -255,7 +255,7 @@ for some choices of \(J\) and \(C_f\).
 
 The evolution of the \(L_2\) norm (Figure \ref{fig:step_laxw_l2_tot}) is similar
 to the one observed for the Gaussian profile, but for the shapes of the curves
-that are not lines anymore. Like before the drop in magnitude of the norm is
+that are not lines anymore. Like before the drop in amplitude of the norm is
 mainly driven by the choice of the resolution.
 
 \begin{center}
@@ -282,7 +282,7 @@ by replacing the (constant) speed \(a\) with \(u\):
 \end{equation}
 
 \noindent
-that is: the speed is not constant anymore, but depends on the magnitude of the
+that is: the speed is not constant anymore, but depends on the amplitude of the
 solution. Points at the top have the greatest speed, while point at the bottom
 have the smaller (down to speed \(0\) for \(u = 0\)).
 
@@ -292,7 +292,7 @@ translation of the initial solution, meaning that you end up with a discontinuit
 at the end just if you had one at the beginning. That is because every point
 travels at the same speed. On the other hand, the \acrshort{beq} might produce
 a discontinuity even if you started with a smooth solution. The reason is that
-since points at different heights have different velocities, points that start
+since points at different heights have different velocities, the ones that start
 behind others but are faster might catch up and form a \textit{shockwave}
 (a discontinuity).
 
@@ -326,7 +326,79 @@ The expectation is that the solution computed using a \acrshort{fc} or a
 
 \noindent
 Therefore if the solution computed with the \acrshort{fc} method converges when
-increasing the resolution it should be the correct one, while the
-\acrshort{nfc} version would be different.
+increasing the resolution it has to be the correct one, while the
+\acrshort{nfc} version will be different.
+
+For this exercise the initial condition is again a \textbf{Gaussian profile}
+set to \(u(t = 0,\ x) = 10 \exp(-(x - x_0)^2)\) with \(x_0 = 5\), to be
+solved on a grid with extent \(x \in [0, 10]\) up to \(t = 0.5\).
+The Courant factor is set to \(C_f = 0.5\) and initially the number of points
+is \(J = 101\). We have checked the behavior of the solutions computed with the
+\acrshort{fc} and the \acrshort{nfc} versions of the \textbf{Upwind scheme}
+varying the resolution. For simplicity, since we knew in advance that the
+solution doesn't grow in amplitude, we set the time step taking into account
+the maximum possible velocity:
+\(\Delta t = C_f \frac{\Delta x}{\max(u(t = 0,\ x))}\), with
+\(\Delta x = 10 / (J - 1)\).
+
+\subsection{Upwind - \acrlong{fc}}
+
+\begin{equation} \label{eq:up-fc}
+    u^{n+1}_j = u^n_j - \frac{\Delta t}{2 \Delta x} \qty[(u^n_j)^2 - (u^n_{j-1})^2]
+\end{equation}
+
+We will take the \acrshort{fc} scenario to showcase the evolution of the
+initial Gaussian profile under the \acrshort{beq} (Figure \ref{fig:up_fc_snap}).
+As time advance the points on top of the gaussian travel more than the ones at
+the bottom, leading to the formation of a shockwave, like we described above.
+Figure \ref{fig:up_fc_if_tot} shows the solutions computed at the final time
+using different resolutions. As can be seen, a higher resolution leads to a
+steeper and more refined discontinuity. This is expected because the method is
+catching the fine details with better precision.
+
+\begin{center}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/IF_1001_UPWIND-FC.png}
+    \captionof{figure}{Upwind - \acrshort{fc}; Snapshots of the solution at different times.}
+    \label{fig:up_fc_snap}
+\end{center}
+
+\begin{center}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/IF_UPWIND-FC.png}
+    \captionof{figure}{Upwind - \acrshort{fc}; \figifcap.}
+    \label{fig:up_fc_if_tot}
+\end{center}
+
+\subsection{Upwind - \acrlong{nfc}}
+
+\begin{equation} \label{eq:up-nfc}
+    u^{n+1}_j = u^n_j - \frac{\Delta t}{\Delta x} u^n_j (u^n_j - u^n_{j-1})
+\end{equation}
+
+Now we can have a look at the \acrshort{nfc} scenario. The evolution until the
+final time is similar to the one in the \acrshort{fc} case, so we will focus
+on the differences between the two methods. Figure \ref{fig:up_nfc_if_tot}
+shows the obtained initial and final conditions. The situation is analogous to
+the previous one, but from Figure \ref{fig:up_comb_if_tot} is clear that the
+solutions computed with the two methods don't coincide. As explained before,
+this behavior is expected due to the Hou - Le Floch Theorem. Increasing the
+resolution wouldn't cause the \acrshort{nfc} solution to shift towards the
+\acrshort{fc} one, which instead is correct by virtue of the
+Lax-Wendroff Theorem.
+
+\begin{center}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/IF_UPWIND-NFC.png}
+    \captionof{figure}{Upwind - \acrshort{nfc}; \figifcap.}
+    \label{fig:up_nfc_if_tot}
+\end{center}
+
+\begin{center}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/IF_UPWIND_COMBINED.png}
+    \captionof{figure}{\figifcap; \acrshort{fc} and \acrshort{nfc} Upwind combined.}
+    \label{fig:up_comb_if_tot}
+\end{center}
 
 \end{document}
