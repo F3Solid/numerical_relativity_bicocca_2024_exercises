@@ -7,8 +7,7 @@
 + [E3](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/tree/main/Homework_1/E3) Folder
   + [Burgers' Equation](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_1/E3/Burgers_Equation.ipynb) Solver
   + [Plots](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_1/E3/Plots.ipynb) Notebook
-+ [Report](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/tree/main/Homework_1/Report) Folder
-  + [PDF](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_1/Report/Report_1.pdf)
++ [Report](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_1/Report/Report_1.pdf)
  
 ## [Homework 2](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_2/Numerical_Relativity_2024_exercise_02.pdf)
 + [E1](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/tree/main/Homework_2/E1) Folder
