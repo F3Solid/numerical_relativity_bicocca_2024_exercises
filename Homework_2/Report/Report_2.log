@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.29)  6 JUN 2024 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.29)  7 JUN 2024 20:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -278,20 +278,20 @@ with amsmath equation tags
 ) (/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/Report_2.aux)
 \openout1 = `Report_2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count307
@@ -318,34 +318,53 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<images/all_exact_if.png, id=1, 722.7pt x 722.7pt>
-File: images/all_exact_if.png Graphic file (type png)
-<use images/all_exact_if.png>
-Package pdftex.def Info: images/all_exact_if.png  used on input line 66.
-(pdftex.def)             Requested size: 360.0pt x 360.00375pt.
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 68.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 68.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 74.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 74.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 68.
+(Font)              for symbol `textbraceleft' on input line 74.
 
-<images/all_1600_snapshots.png, id=14, 722.7pt x 722.7pt>
+[2]
+<images/all_exact_if.png, id=16, 619.3539pt x 608.22432pt>
+File: images/all_exact_if.png Graphic file (type png)
+<use images/all_exact_if.png>
+Package pdftex.def Info: images/all_exact_if.png  used on input line 93.
+(pdftex.def)             Requested size: 360.0pt x 353.53137pt.
+<images/all_1600_snapshots.png, id=18, 619.3539pt x 608.22432pt>
 File: images/all_1600_snapshots.png Graphic file (type png)
 <use images/all_1600_snapshots.png>
-Package pdftex.def Info: images/all_1600_snapshots.png  used on input line 73.
-(pdftex.def)             Requested size: 360.0pt x 360.00375pt.
-[2 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png>]
-<images/all_1600_initial_compare.png, id=20, 722.7pt x 722.7pt>
+Package pdftex.def Info: images/all_1600_snapshots.png  used on input line 100.
+(pdftex.def)             Requested size: 360.0pt x 353.53137pt.
+ [3 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png>]
+<images/all_1600_initial_compare.png, id=23, 619.3539pt x 608.22432pt>
 File: images/all_1600_initial_compare.png Graphic file (type png)
 <use images/all_1600_initial_compare.png>
-Package pdftex.def Info: images/all_1600_initial_compare.png  used on input line 80.
-(pdftex.def)             Requested size: 360.0pt x 360.00375pt.
- [3 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_snapshots.png>] [4 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_initial_compare.png>] (/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/Report_2.aux)
+Package pdftex.def Info: images/all_1600_initial_compare.png  used on input line 107.
+(pdftex.def)             Requested size: 360.0pt x 353.53137pt.
+ [4 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_snapshots.png>]
+<images/rho_final_rescompare_raw.png, id=28, 641.61307pt x 801.04068pt>
+File: images/rho_final_rescompare_raw.png Graphic file (type png)
+<use images/rho_final_rescompare_raw.png>
+Package pdftex.def Info: images/rho_final_rescompare_raw.png  used on input line 114.
+(pdftex.def)             Requested size: 360.0pt x 449.45978pt.
+ [5 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_initial_compare.png>]
+<images/press_final_rescompare_raw.png, id=33, 641.61307pt x 600.70824pt>
+File: images/press_final_rescompare_raw.png Graphic file (type png)
+<use images/press_final_rescompare_raw.png>
+Package pdftex.def Info: images/press_final_rescompare_raw.png  used on input line 121.
+(pdftex.def)             Requested size: 360.0pt x 337.05428pt.
+ [6 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/rho_final_rescompare_raw.png>]
+<images/vel[0]_final_rescompare_raw.png, id=38, 641.61307pt x 600.70824pt>
+File: images/vel[0]_final_rescompare_raw.png Graphic file (type png)
+<use images/vel[0]_final_rescompare_raw.png>
+Package pdftex.def Info: images/vel[0]_final_rescompare_raw.png  used on input line 128.
+(pdftex.def)             Requested size: 360.0pt x 337.05428pt.
+ [7 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/press_final_rescompare_raw.png>] [8 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/vel[0]_final_rescompare_raw.png>] [9] (/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/Report_2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-05-08>
@@ -356,18 +375,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 8533 strings out of 473993
- 139603 string characters out of 5741034
- 1932904 words of memory out of 5000000
- 30906 multiletter control sequences out of 15000+600000
+ 8559 strings out of 473993
+ 140623 string characters out of 5741034
+ 1933904 words of memory out of 5000000
+ 30932 multiletter control sequences out of 15000+600000
  563998 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,6n,93p,2504b,359s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/Report_2.pdf" (4 pages, 1321539 bytes).
+Output written on "/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/Report_2.pdf" (9 pages, 3373817 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

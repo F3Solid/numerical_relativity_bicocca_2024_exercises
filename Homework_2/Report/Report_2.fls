@@ -143,14 +143,14 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
-INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
-INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
-INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
 OUTPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/Report_2.pdf
-INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_exact_if.png
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_snapshots.png
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_snapshots.png
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_snapshots.png
@@ -161,6 +161,21 @@ INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_initial_compare.png
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_initial_compare.png
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/all_1600_initial_compare.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/rho_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/rho_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/rho_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/rho_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/rho_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/press_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/press_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/press_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/press_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/press_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/vel[0]_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/vel[0]_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/vel[0]_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/vel[0]_final_rescompare_raw.png
+INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/images/vel[0]_final_rescompare_raw.png
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_2/Report/Report_2.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
