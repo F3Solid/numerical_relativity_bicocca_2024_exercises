@@ -47,7 +47,7 @@ with the Minmod slope limiter. The domain extends in the range
 The grid spacings used are \(\{0.005, 0.0025, 0.00125, 0.000625\}\),
 corresponding respectively to \(\{200, 400, 800, 1600\}\) grid points.
 
-\subsection{Highest Resolution: 1600 points}
+\subsection{Highest Resolution: 1600 points} \label{sec:highres1600}
 
 We will use the results obtained with the highest resolution to showcase
 how the numerical solutions look. Figure
@@ -63,28 +63,38 @@ profile, though they are less evident. Figure
 \ref{fig:all_1600_initial_compare} compares the interpolated initial
 data with the raw initial data actually used by the \acrshort{etk}.
 
-The numerical solution manages to correctly capture the discontinuities
-in the observed physical variables for the Sod problem. The accuracy
-depends on the number of grid points, but the slight smoothing
-of the discontinuities seems to be a characteristic feature of the
-HLLE Riemann solver. This doesn't seem to be related to the
-interpolation of the data on the plot's grid, as shown in the next
-section (Section \ref{sec:rescomp}).
+The numerical solution captures the discontinuities in the physical
+variables observed for the Sod problem. Accuracy depends on the
+number of grid points, but slight smoothing of the discontinuities
+seems to be a characteristic feature of the HLLE Riemann solver.
+This also applies to the boundaries of the rarefaction wave,
+where the solution slope changes rapidly. This behavior
+isn't related to the interpolation of the data on the plot's
+grid, as shown in the next section (\ref{sec:rescomp}).
 
 \subsection{Resolutions Comparison} \label{sec:rescomp}
 
-Now we look at the results obtained with different resolutions and
-compare them to the exact solution. In order to avoid visualization
+Now we examine the results obtained with different resolutions and
+compare them to the exact solution. To avoid visualization
 artifacts, we will use the raw data from the \acrshort{etk} and not the
 interpolated ones. Figures \ref{fig:rho_final_rescompare},
 \ref{fig:press_final_rescompare}, and \ref{fig:vel_final_rescompare}
-show the final iteration of the evolution of, respectively, density,
-pressure, and velocity.
-As mentioned in the previous section, the smoothing of the
-discontinuities appears to be a feature of the Riemann solver rather
-than of the chosen resolution. At the same time, as expected, it is
-indeed true that a finer spacing of the numerical grid reduces the
-observed smoothing.
+show the final iteration of the evolution of density, pressure,
+and velocity respectively.
+
+As mentioned in the previous section (\ref{sec:highres1600}),
+the smoothing of the discontinuities appears to be a feature of
+the Riemann solver rather than of the chosen resolution.
+At the same time, as expected, it is indeed true that a finer
+spacing of the numerical grid reduces the observed smoothing.
+Moreover, we point out that there are no evident numerical
+oscillations near the discontinuities for any of the resolutions used.
+
+Overall, considering its simplicity and low computational cost,
+the HLLE solver showed good handling of the Sod problem resolution.
+However, simulations where high shock resolution is needed,
+might require more advanced and computationally expensive
+Riemann solvers.
 
 \newpage
 
