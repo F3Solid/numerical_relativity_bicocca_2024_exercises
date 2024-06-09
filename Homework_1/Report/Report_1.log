@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.29)  3 JUN 2024 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.29)  9 JUN 2024 15:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -278,20 +278,20 @@ with amsmath equation tags
 ) (/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.aux)
 \openout1 = `Report_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count307
@@ -318,17 +318,17 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 39.
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 35.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 43.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 43.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 39.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 39.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 43.
+(Font)              for symbol `textbraceleft' on input line 39.
 
 [1
 
@@ -336,81 +336,81 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 <images/IF_Cf-0.25_N-101.png, id=19, 462.528pt x 346.896pt>
 File: images/IF_Cf-0.25_N-101.png Graphic file (type png)
 <use images/IF_Cf-0.25_N-101.png>
-Package pdftex.def Info: images/IF_Cf-0.25_N-101.png  used on input line 92.
+Package pdftex.def Info: images/IF_Cf-0.25_N-101.png  used on input line 71.
 (pdftex.def)             Requested size: 323.9978pt x 243.01079pt.
 <images/L2_GAUS_FTCS.png, id=21, 722.7pt x 578.16pt>
 File: images/L2_GAUS_FTCS.png Graphic file (type png)
 <use images/L2_GAUS_FTCS.png>
-Package pdftex.def Info: images/L2_GAUS_FTCS.png  used on input line 99.
+Package pdftex.def Info: images/L2_GAUS_FTCS.png  used on input line 78.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [2 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_Cf-0.25_N-101.png>]
 <images/IF_GAUS_LAX-F.png, id=28, 722.7pt x 578.16pt>
 File: images/IF_GAUS_LAX-F.png Graphic file (type png)
 <use images/IF_GAUS_LAX-F.png>
-Package pdftex.def Info: images/IF_GAUS_LAX-F.png  used on input line 125.
+Package pdftex.def Info: images/IF_GAUS_LAX-F.png  used on input line 95.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [3 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/L2_GAUS_FTCS.png>]
 <images/L2_GAUS_LAX-F.png, id=33, 722.7pt x 578.16pt>
 File: images/L2_GAUS_LAX-F.png Graphic file (type png)
 <use images/L2_GAUS_LAX-F.png>
-Package pdftex.def Info: images/L2_GAUS_LAX-F.png  used on input line 132.
+Package pdftex.def Info: images/L2_GAUS_LAX-F.png  used on input line 102.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [4 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_GAUS_LAX-F.png> </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/L2_GAUS_LAX-F.png>]
 <images/L2_GAUS_LEAPFROG.png, id=39, 722.7pt x 578.16pt>
 File: images/L2_GAUS_LEAPFROG.png Graphic file (type png)
 <use images/L2_GAUS_LEAPFROG.png>
-Package pdftex.def Info: images/L2_GAUS_LEAPFROG.png  used on input line 154.
+Package pdftex.def Info: images/L2_GAUS_LEAPFROG.png  used on input line 117.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [5 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/L2_GAUS_LEAPFROG.png>]
 <images/IF_GAUS_LAX-W.png, id=44, 722.7pt x 578.16pt>
 File: images/IF_GAUS_LAX-W.png Graphic file (type png)
 <use images/IF_GAUS_LAX-W.png>
-Package pdftex.def Info: images/IF_GAUS_LAX-W.png  used on input line 184.
+Package pdftex.def Info: images/IF_GAUS_LAX-W.png  used on input line 134.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
 <images/L2_GAUS_LAX-W.png, id=45, 722.7pt x 578.16pt>
 File: images/L2_GAUS_LAX-W.png Graphic file (type png)
 <use images/L2_GAUS_LAX-W.png>
-Package pdftex.def Info: images/L2_GAUS_LAX-W.png  used on input line 191.
+Package pdftex.def Info: images/L2_GAUS_LAX-W.png  used on input line 141.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [6 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_GAUS_LAX-W.png>] [7 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/L2_GAUS_LAX-W.png>]
 <images/IF_STEP_LAX-F.png, id=55, 722.7pt x 578.16pt>
 File: images/IF_STEP_LAX-F.png Graphic file (type png)
 <use images/IF_STEP_LAX-F.png>
-Package pdftex.def Info: images/IF_STEP_LAX-F.png  used on input line 227.
+Package pdftex.def Info: images/IF_STEP_LAX-F.png  used on input line 160.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [8 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_STEP_LAX-F.png>]
 <images/IF_STEP_LAX-W.png, id=60, 722.7pt x 578.16pt>
 File: images/IF_STEP_LAX-W.png Graphic file (type png)
 <use images/IF_STEP_LAX-W.png>
-Package pdftex.def Info: images/IF_STEP_LAX-W.png  used on input line 263.
+Package pdftex.def Info: images/IF_STEP_LAX-W.png  used on input line 182.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
 <images/L2_STEP_LAX-W.png, id=61, 722.7pt x 578.16pt>
 File: images/L2_STEP_LAX-W.png Graphic file (type png)
 <use images/L2_STEP_LAX-W.png>
-Package pdftex.def Info: images/L2_STEP_LAX-W.png  used on input line 270.
+Package pdftex.def Info: images/L2_STEP_LAX-W.png  used on input line 189.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [9 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_STEP_LAX-W.png>] [10 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/L2_STEP_LAX-W.png>]
 <images/IF_1001_UPWIND-FC.png, id=70, 722.7pt x 578.16pt>
 File: images/IF_1001_UPWIND-FC.png Graphic file (type png)
 <use images/IF_1001_UPWIND-FC.png>
-Package pdftex.def Info: images/IF_1001_UPWIND-FC.png  used on input line 361.
+Package pdftex.def Info: images/IF_1001_UPWIND-FC.png  used on input line 242.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [11]
 <images/IF_UPWIND-FC.png, id=74, 722.7pt x 578.16pt>
 File: images/IF_UPWIND-FC.png Graphic file (type png)
 <use images/IF_UPWIND-FC.png>
-Package pdftex.def Info: images/IF_UPWIND-FC.png  used on input line 368.
+Package pdftex.def Info: images/IF_UPWIND-FC.png  used on input line 249.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [12 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_1001_UPWIND-FC.png> </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_UPWIND-FC.png>]
 <images/IF_UPWIND-NFC.png, id=80, 722.7pt x 578.16pt>
 File: images/IF_UPWIND-NFC.png Graphic file (type png)
 <use images/IF_UPWIND-NFC.png>
-Package pdftex.def Info: images/IF_UPWIND-NFC.png  used on input line 392.
+Package pdftex.def Info: images/IF_UPWIND-NFC.png  used on input line 264.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
 <images/IF_UPWIND_COMBINED.png, id=81, 722.7pt x 578.16pt>
 File: images/IF_UPWIND_COMBINED.png Graphic file (type png)
 <use images/IF_UPWIND_COMBINED.png>
-Package pdftex.def Info: images/IF_UPWIND_COMBINED.png  used on input line 399.
+Package pdftex.def Info: images/IF_UPWIND_COMBINED.png  used on input line 271.
 (pdftex.def)             Requested size: 323.9978pt x 259.19917pt.
  [13 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_UPWIND-NFC.png>] [14 </Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/images/IF_UPWIND_COMBINED.png>] (/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.aux)
  ***********
@@ -431,7 +431,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  94i,6n,93p,2504b,416s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/Federico/Library/texlive/2024/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.pdf" (14 pages, 7519228 bytes).
+Output written on "/Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.pdf" (14 pages, 7519232 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
