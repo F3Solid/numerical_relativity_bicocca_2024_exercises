@@ -19,7 +19,7 @@
 \newacronym{nfc}{NFC}{Non Flux Conservative}
 
 % Defining variables
-\newcommand\figltwocap{\(L_2\) norm; \(+\) are saved data points for comparison with the initial \(C_f\) and \(J\) values}
+\newcommand\figltwocap{\(L_2\) norm; \(+\) markers are saved data points for comparison with the initial \(C_f\) and \(J\) values}
 \newcommand\figifcap{Initial and final conditions}
 
 \title{Numerical Relativity Homework 1}
@@ -52,9 +52,9 @@ Since the \acrshort{aeq} doesn't affect the shape and amplitude of the solution 
 \end{equation}
 
 \noindent
-where \(u^n_j = u(t^n,\ x_j)\), \(J\) is the total number of points in the space domain and \(n\) is the time index at which we are evaluating the solution.
+where \(u^n_j = u(t^n,\ x_j)\), \(J\) is the total number of points in the space domain, and \(n\) is the time index at which we are evaluating the solution.
 
-For this exercise the initial condition is a \textbf{Gaussian profile} set to \(u(t = 0,\ x) = \exp(-(x - x_0)^2)\) with \(x_0 = 5\), to be solved on a grid with extent \(x \in [0, 10]\) up to \(t = 20\). Initially the Courant factor is set to \(C_f = 0.5\) and the number of points to \(J = 101\), corresponding to a resolution of \(10 / (J - 1) = 0.1\). Those have been varied to check the behavior of the numerical methods. The speed \(a\) is set to \(1\).
+For this exercise the initial condition is a \textbf{Gaussian profile} set to \(u(t = 0,\ x) = \exp(-(x - x_0)^2)\) with \(x_0 = 5\), to be solved on a grid with extent \(x \in [0, 10]\) up to \(t = 20\). Initially the Courant factor is set to \(C_f = 0.5\) and the number of points to \(J = 101\), corresponding to \(\Delta x = 10 / (J - 1) = 0.1\). Those have been varied to test the behavior of the numerical methods. The speed \(a\) is set to \(1\). Finally, periodic boundary conditions have been used, meaning that the value of \(u\) at the first points on the left and on the right of the numerical grid have been set respectively to \(u^n_J\) and \(u^n_1\).
 
 In every \(L_2\) norm plot the norm its self has been normalized to its initial value to facilitate the comparison between results obtained with different values of \(J\) and \(C_f\).
 
@@ -64,7 +64,7 @@ In every \(L_2\) norm plot the norm its self has been normalized to its initial 
     u^{n+1}_j = u^n_j - \frac{a \Delta t}{2 \Delta x} (u^n_{j+1} - u^n_{j-1})
 \end{equation}
 
-The FTCS method is unconditionally unstable and we expect the solution to explode after a sufficient number of time steps. An example of what the solution at the final time looks compared to the initial profile can be seen in Figure \ref{fig:ftcs_if_1}. Changing the Courant factor and the number of grid points influences the rapidity of the \textit{explosion} as can be see in Figure \ref{fig:ftcs_l2_tot}.
+The FTCS method is first order in time and second order in space. It is unconditionally unstable and so we expect the solution to explode after a sufficient number of time steps. An example of what the solution at the final time looks compared to the initial profile can be seen in Figure \ref{fig:ftcs_if_1}. Changing the Courant factor or the number of grid points influences the rapidity of the \textit{explosion}, as can be seen in Figure \ref{fig:ftcs_l2_tot}. The norm grows more rapidly when one of the two gets increased.
 
 \begin{center}
     \centering
@@ -86,9 +86,9 @@ The FTCS method is unconditionally unstable and we expect the solution to explod
     u^{n+1}_j = \frac{1}{2}(u^n_{j-1} + u^n_{j+1}) - \frac{a \Delta t}{2 \Delta x} (u^n_{j+1} - u^n_{j-1})
 \end{equation}
 
-The \acrshort{laxf} method is conditionally stable; the stability condition is given by \(\Delta t = C_f \frac{\Delta x}{\abs{a}}\) with \(C_f \leq 1\). The derivation of this method is achieved with the introduction of a \textit{dissipative} term in the \acrshort{aeq}; this means that the amplitude of the solution decreases in time depending on the Courant factor and the number of grid points.
+The \acrshort{laxf} method is first order both in time and space. It is conditionally stable; the stability condition is given by \(\Delta t = C_f \frac{\Delta x}{\abs{a}}\) with \(C_f \leq 1\). The derivation of this method is achieved with the introduction of a \textit{dissipative} term in the \acrshort{aeq}; this means that the amplitude of the solution decreases in time depending on the Courant factor and the number of grid points.
 
-As can be seen from Figure \ref{fig:laxf_if_tot}, increasing the resolution of the grid or the Courant factor helps in preserving the initial amplitude of the solution. These features are also present in the evolution of the \(L_2\) norm (Figure \ref{fig:laxf_l2_tot}). Further comments are in section \ref{sec:step_laxf}.
+As can be seen from Figure \ref{fig:laxf_if_tot}, increasing the resolution of the grid or the Courant factor helps in preserving the initial amplitude of the solution. These features are also present in the evolution of the \(L_2\) norm (Figure \ref{fig:laxf_l2_tot}).
 
 \begin{center}
     \centering
@@ -110,7 +110,14 @@ As can be seen from Figure \ref{fig:laxf_if_tot}, increasing the resolution of t
     u^{n+1}_j = u^{n-1}_j - \frac{a \Delta t}{\Delta x} (u^n_{j+1} - u^n_{j-1})
 \end{equation}
 
-Like the \acrshort{laxf}, the Leapfrog method is stable for \(C_f \leq 1\). The main difference of this compared with the others is that it involves 3 time levels at each step: the next step is computed as a function of the current step and of the previous one. For the first time step (which relies on the value of \(u\) one step before the initial time \(t = 0\)) the solution has been computed using the \acrshort{laxf} method. The \(L_2\) shows oscillations with an amplitude that depends on the resolution and the Courant factor (Figure \ref{fig:leapfrog_l2_tot}).
+Like the \acrshort{laxf}, the Leapfrog method is stable for \(C_f \leq 1\), but this time it is second order both in time and space. The main difference of this compared with the others is that it involves 3 time levels at each step: the next step is computed as a function of the current step and of the previous one. For the first time step (which relies on the value of \(u\) one step before the initial time \(t = 0\)) the solution has been computed using the \acrshort{laxf} method. The \(L_2\) norm shows oscillations with an amplitude that depends on the resolution and the Courant factor (Figure \ref{fig:leapfrog_l2_tot}), but doesn't present strong dissipation like for the \acrshort{laxf}. The final solutions are plotted in Figure \ref{fig:leapfrog_if_tot}.
+
+\begin{center}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/IF_GAUS_LEAPFROG.png}
+    \captionof{figure}{Leapfrog; \figifcap.}
+    \label{fig:leapfrog_if_tot}
+\end{center}
 
 \begin{center}
     \centering
@@ -125,9 +132,9 @@ Like the \acrshort{laxf}, the Leapfrog method is stable for \(C_f \leq 1\). The 
     u^{n+1}_j = u^n_j - \frac{a \Delta t}{2 \Delta x} (u^n_{j+1} - u^n_{j-1}) + \frac{1}{2}\qty(\frac{a \Delta t}{\Delta x})^2 (u^n_{j+1} - 2u^n_j + u^n_{j-1})
 \end{equation}
 
-The \acrshort{laxw} scheme is a combination of the \acrshort{laxf} and the Leapfrog. Its main new feature is the introduction of a \textit{dispersive} term in the \acrshort{aeq}. The dissipative term from the \acrshort{laxf} is still there, but is subdominant. The final solutions computed with this method with different values of the resolution and \(C_f\) can be seen in Figure \ref{fig:laxw_if_tot}. As expected the strong dissipation observed for the \acrshort{laxf} method doesn't occur; instead, we can see the effect of the dispersive term on the left side of the Gaussian profile.
+The \acrshort{laxw} scheme is a combination of the \acrshort{laxf} and the Leapfrog and is second order both in time and space. One of the main difference with the other methods is the introduction of a \textit{dispersive} term in the \acrshort{aeq}. The dissipative term from the \acrshort{laxf} is still there, but is subdominant. The final solutions computed with this method with different values of the resolution and \(C_f\) can be seen in Figure \ref{fig:laxw_if_tot}. As expected the strong dissipation observed for the \acrshort{laxf} method doesn't occur; instead, we can see the effect of the dispersive term on the left side of the Gaussian profile.
 
-In this case the dependence of the \(L_2\) norm from the Courant factor is different from the \acrshort{laxf} case because it appears in a more complicated way in the Von Neumann stability analysis. Figure \ref{fig:laxw_l2_tot} shows the evolution of the \(L_2\) norm for the cases of Figure \ref{fig:laxw_if_tot}. It appears that the main behavior of the norm is driven by the the used resolution rather than the choice of the Courant factor. Further comments are in section \ref{sec:step_laxw}.
+In this case the dependence of the \(L_2\) norm from the Courant factor is different from the \acrshort{laxf} case because it appears in a more complicated way in the Von Neumann stability analysis. Figure \ref{fig:laxw_l2_tot} shows the evolution of the \(L_2\) norm: in contrast to what observed before, increasing or decreasing the Courant factor from the initial value of \(0.5\) results in an improvement of the conservation of the norm. The behavior observed when increasing the resolution instead is the same already seen for the other methods.
 
 \begin{center}
     \centering
@@ -149,11 +156,11 @@ The aim now is to solve the \acrshort{aeq} replacing the Gaussian profile with a
 
 \subsection{\acrlong{laxf}} \label{sec:step_laxf}
 
-In order to advance of one step the \acrshort{laxf} method takes the average of the values on the left and on the right of each numerical cell. This is done by the \(\frac{1}{2}(u^n_{j-1} + u^n_{j+1})\) term in Equation \ref{eq:lax-f}. This means that when we apply it to the Step Function the edges of the \textit{step} get weighted down and a new discontinuity is generated. At the next iteration the new \textit{steps} are treated like the previous one, generating new discontinuities, and so on.
+In order to advance of one step the \acrshort{laxf} method takes the average of the values on the left and on the right of each numerical cell. This is done by the \(\frac{1}{2}(u^n_{j-1} + u^n_{j+1})\) term in Equation \ref{eq:lax-f}. This means that when we apply it to the Step Function the edges of the step get weighted down and a new step is generated. At the next iteration the new steps are treated like the previous one, generating new steps, and so on. This behavior, combined with the strong dissipation of this method, leads to the final solutions in Figure \ref{fig:step_laxf_if_tot}.
 
-Using a high resolution reduces the dissipation (like for the Gaussian profile) and helps to keep the initial shape. A lower resolution instead spreads the \textit{steps} profile on the wider domain of the individual cells. However, the "spreading" is mainly controlled by the Courant factor: the higher the Courant factor, the higher the time step, the lower is the number of iterations and then the "spreading". Some example of the final shape of the solution compared with the initial one are in Figure \ref{fig:step_laxf_if_tot}.
+Using a high resolution reduces the dissipation (like for the Gaussian profile) and helps to keep the initial shape. A lower resolution or Courant factor instead spreads the steps profile on the wider domain of the individual cells.
 
-The evolution of the \(L_2\) norm is the same observed for the Gaussian profile (Figure \ref{fig:laxf_l2_tot}).
+The evolution of the \(L_2\) norm is the same observed for the Gaussian profile (Figure \ref{fig:step_laxf_l2_tot}).
 
 \begin{center}
     \centering
@@ -162,9 +169,16 @@ The evolution of the \(L_2\) norm is the same observed for the Gaussian profile 
     \label{fig:step_laxf_if_tot}
 \end{center}
 
-\subsection{\acrlong{laxw}} \label{sec:step_laxw}
+\begin{center}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/L2_STEP_LAX-F.png}
+    \captionof{figure}{Step Function; \acrshort{laxf}; \(L_2\) norm.}
+    \label{fig:step_laxf_l2_tot}
+\end{center}
 
-If the \acrshort{laxf} method approximates the solution with piecewise constant functions in every numerical cell, the \acrshort{laxw} also introduces a slope to fit better the actual solution. The introduction of a slope has the effect of generating oscillations in proximity of the discontinuities (the \textit{steps}). That happens because the solution in each cell is then represented with a line with a slope given by the incremental ratio passing by the average value inside that cell. Moreover, we can recall the \textbf{Godunov's Theorem}:
+\subsection{\acrlong{laxw}}
+
+If the \acrshort{laxf} method approximates the solution with piecewise constant functions in every numerical cell, the \acrshort{laxw} also introduces a slope to fit better the actual solution. The introduction of a slope has the effect of generating oscillations in proximity of the discontinuities (the \textit{steps}). That happens because the solution in each cell is in general represented with a non-zero slope line passing by the average value of \(u\) inside that cell. Moreover, we can recall the \textbf{Godunov's Theorem}:
 
 \begin{quote}
     Linear monotonic schemes are at most first order accurate.
@@ -175,7 +189,7 @@ Therefore, since the \acrshort{laxw} is linear and second order, we expect it no
 
 We expect the resolution to affect how much the oscillations are "spread": a higher resolution (smaller cells) keeps the oscillations more confined near the discontinuities. Figure \ref{fig:step_laxw_if_tot} shows the final solutions for some choices of \(J\) and \(C_f\).
 
-The evolution of the \(L_2\) norm (Figure \ref{fig:step_laxw_l2_tot}) is similar to the one observed for the Gaussian profile, but for the shapes of the curves that are not lines anymore. Like before the drop in amplitude of the norm is mainly driven by the choice of the resolution.
+The evolution of the \(L_2\) norm (Figure \ref{fig:step_laxw_l2_tot}) is similar to the one observed for the Gaussian profile, but for the shapes of the curves that are not lines anymore. Like before we observe the same effects when changing the number of grid points or the Courant factor.
 
 \begin{center}
     \centering
