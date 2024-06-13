@@ -5,6 +5,7 @@
         "HLLE",
         "Minmod",
         "Neumann",
+        "polytropic",
         "Wendroff"
     ]
 }
