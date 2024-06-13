@@ -11,4 +11,7 @@
  
 ## [Homework 2](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_2/Numerical_Relativity_2024_exercise_02.pdf)
 + [E1](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/tree/main/Homework_2/E1) Folder
+  + [Plots](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_2/E1/ETK_1D_plots.ipynb) Notebook
 + [E2](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/tree/main/Homework_2/E2) Folder
+  + [Plots](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_2/E2/ETK_TOV_plots.ipynb) Notebook
++ [Report](https://github.com/F3Solid/numerical_relativity_bicocca_2024_exercises/blob/main/Homework_2/Report/Report_2.pdf)
