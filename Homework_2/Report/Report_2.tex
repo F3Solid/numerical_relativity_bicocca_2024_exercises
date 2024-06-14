@@ -5,7 +5,7 @@
 \usepackage[acronym]{glossaries} % for acronyms
 \usepackage{physics} % Physics symbols
 
-\usepackage{showlabels} % To show equations labels on the PDF. Comment at the end
+% \usepackage{showlabels} % To show equations labels on the PDF. Comment at the end
 
 % Defining acronyms
 \newacronym{etk}{ETK}{Einstein Toolkit}
@@ -13,6 +13,14 @@
 \newacronym{ns}{NS}{neutron star}
 \newacronym{iu}{IU}{internal units}
 \newacronym{eos}{EOS}{equation of state}
+\newacronym{mol}{MoL}{Method of Lines}
+\newacronym{pde}{PDE}{partial differential equation}
+\newacronym{pdes}{PDEs}{partial differential equations}
+\newacronym{ode}{ODE}{ordinary differential equation}
+\newacronym{odes}{ODEs}{ordinary differential equations}
+\newacronym{rk}{RK}{Runge-Kutta}
+\newacronym{tvd}{TVD}{total variation diminishing}
+\newacronym{ppm}{PPM}{piecewise parabolic method}
 
 % Defining variables
 \newcommand\figifcap{Initial and final conditions}
@@ -26,7 +34,7 @@
 
 \maketitle
 
-\section{Sod Shock Tube Problem}
+\section{Sod Shock Tube Problem} \label{sec:sod_main}
 
 The Sod shock tube problem consists of a one-dimensional Riemann problem with initial discontinuities in density and pressure. The time evolution of the system can be computed by solving the Euler equations. Since the solution to this problem can be computed exactly, it is useful
 for testing the accuracy of numerical codes. In this exercise, we solve the Sod problem with the \acrfull{etk} using different resolutions and compare the results with the exact solution.
@@ -38,7 +46,7 @@ For the numerical solutions, the HLLE Riemann solver has been used, along with t
 
 \subsection{Highest Resolution: 1600 points} \label{sec:highres1600}
 
-We will use the results obtained with the highest resolution to showcase how the numerical solutions look. Figure \ref{fig:all_1600_snapshots} shows some snapshots of the profiles of density, pressure, and velocity of the fluid, including the initial and the final ones. As can be seen, S and CD waves travel in opposite directions with respect to the R waves. We point out that the fact that the initial profile in Figure \ref{fig:all_1600_snapshots} doesn't perfectly resemble a step (as it should) is due to the way the numerical results are interpolated on the chosen uniform grid \([-0.45, 0.45]\). Interpolation effects are also present in the final profile, though they are less evident. However these effects can be reduced by increasing the number of grid points of the uniform grid used for the plot. Figure \ref{fig:all_1600_initial_compare} compares the interpolated initial data with the raw initial data actually used by the \acrshort{etk}. 
+We will use the results obtained with the highest resolution to showcase how the numerical solutions look. Figure \ref{fig:all_1600_snapshots} shows some snapshots of the profiles of density, pressure, and velocity of the fluid, including the initial and the final ones. As can be seen, S and CD waves travel in opposite directions with respect to the R waves. We point out that the fact that the initial profile in Figure \ref{fig:all_1600_snapshots} doesn't perfectly resemble a step (as it should) is due to the way the numerical results are interpolated on the chosen uniform grid \([-0.45, 0.45]\). Interpolation effects are also present in the final profile, though they are less evident. However these effects can be reduced by increasing the number of grid points of the uniform grid used for the plot. Figure \ref{fig:all_1600_initial_compare} compares the interpolated initial data with the raw initial data actually used by the \acrshort{etk}.
 
 The numerical solution captures the discontinuities in the physical variables observed for the Sod problem. Accuracy depends on the number of grid points, but slight smoothing of the discontinuities seems to be a characteristic feature of the HLLE Riemann solver. This also applies to the boundaries of the rarefaction wave, where the solution slope changes rapidly. This behavior isn't related to the interpolation of the data on the plot's grid, as shown in the next section (\ref{sec:rescomp}).
 
@@ -113,7 +121,7 @@ In every part of the exercise, the final time of the simulation is set to \(400\
 
 \subsection{Changing the resolution}
 
-Figure \ref{fig:ns_rho_init_rescompare} shows the projection on the \(xy\) plane of the rest mass density of the initialized \acrshort{ns} with each of the used resolutions. The spherical symmetry of the problem is clearly broken by the discrete numerical grid we are using in the simulation. However, the higher the resolution, the better the star resembles a perfect sphere on the grid. This has direct effects on the numerical evolution of the \acrshort{ns}. Outside of the \acrshort{ns}, the value of the density is constant around \(10^{8}\ \mathrm{g\ cm^{-3}}\). This is because its minimum value has been manually set to \(10^{-10}\ \mathrm{M_\odot^{-2}}\) in the parameter file.
+Figure \ref{fig:ns_rho_init_rescompare} shows the projection on the \(xy\) plane of the rest mass density of the initialized \acrshort{ns} with each of the used resolutions. The spherical symmetry of the problem is clearly broken by the discrete numerical grid we are using in the simulation. However, the higher the resolution, the better the star resembles a perfect sphere on the grid. This has direct effects on the numerical evolution of the \acrshort{ns}. Outside of the \acrshort{ns}, the value of the density is constant around \(10^{8}\ \mathrm{g\ cm^{-3}}\). This is because its minimum value has been manually set to \(10^{-10}\ \mathrm{M_\odot^{-2}}\) in the parameter file to prevent a transition to near-zero densities at the border of the star. Such a transition is undesirable from a numerical point of view because of the finite precision of the machine running the simulation.
 
 Figure \ref{fig:ns_rhoc_0_rescompare} shows the evolution in time of the central value of the density with the used resolutions. Since no physical dissipation effect is taken into account in the simulation, if the spherical symmetry of the problem were preserved, then we'd expect the central density to stay constant in time. However, the fact that the star is discretized on the grid leads to the oscillations we observe. The lower the resolution, the further the star is from spherical symmetry, the greater the oscillations it experiences to adapt to the discretized space it lies in.
 
@@ -128,7 +136,8 @@ In the second part of the exercise, we introduced a pressure perturbation in the
 \noindent
 where \(K\) is the polytropic constant, and \(\gamma\) is the adiabatic index. The \acrlong{ns} has been initialized using \(K = 100\), while the \acrshort{eos} for the evolution has \(K = 110\). The simulations have been run using the same resolutions as before and the initial conditions are also unchanged (same as Figure \ref{fig:ns_rho_init_rescompare}).
 
-Figure \ref{fig:ns_rhoc_pert_110_rescompare} shows the time evolution of the central density for the used grid spacings. The introduction of a pressure perturbation modifies the hydrostatic equilibrium of the \acrshort{ns}; the star tries to regain equilibrium, resulting in radial pulsations proportional to the amplitude of the perturbation. Figure \ref{fig:ns_radial_pulsations} shows some snapshots of the matter distribution of the \acrshort{ns} during the simulation for the finest spacing used. As already mentioned, since the star matter is treated as a perfect fluid and the simulation doesn't take into account any dissipation effects, the amplitude of the oscillations should stay constant in time. This is not the case because of the discreteness of the numerical simulation. In fact, we notice some evident damping for the low resolution case, while it is much weaker when the resolution gets increased.
+Figure \ref{fig:ns_rhoc_pert_110_rescompare} shows the time evolution of the central density for the used grid spacings. The introduction of a pressure perturbation modifies the hydrostatic equilibrium of the \acrshort{ns}; the star tries to regain equilibrium, resulting in radial pulsations proportional to the amplitude of the perturbation. Figure \ref{fig:ns_radial_pulsations} shows some snapshots of the matter distribution of the \acrshort{ns} during the simulation for the finest spacing used. As already mentioned, since the star matter is treated as a perfect fluid and the simulation doesn't take into account any dissipation effects, the amplitude of the oscillations should stay constant in time. This is not the case because of the discreteness of the numerical simulation. In fact, we notice some evident damping for the low resolution case, while it is much weaker when the resolution gets increased. The density perturbations visible in Figure \ref{fig:ns_radial_pulsations} are due to the fictitious fluid the \acrshort{ns} is embedded in as a result of the fixed minimum value of the rest mass density.
+
 However, we point out that pure numerical oscillations in the perturbed case are a minor effect with respect to the physical ones. Figure \ref{fig:ns_rhoc_all_compare} shows the central density evolution for the perturbed and the unperturbed cases plotted together in terms of relative percentage variation from the initial value.
 
 \newpage
@@ -171,5 +180,80 @@ However, we point out that pure numerical oscillations in the perturbed case are
 \newpage
 
 \section{\acrlong{etk} parameters}
+
+For the last exercise, we explain the meaning of some entries in the parameter files we used to run the simulations with the \acrlong{etk}.
+
+\subsection{\acrfull{mol}}
+
+The \acrlong{mol} is a way to convert a system of \acrfull{pdes} into a system of \acrfull{odes}. Then, given the separation of the time component and a way to discretize space, an \acrshort{ode} integrator can be used to perform the time evolution.
+
+The \textit{\acrshort{mol}} thorn in the \acrshort{etk} provides various options. One popular choice, also used in the previous exercises, is the \acrfull{rk} time integrator. For the Sod problem, we used the second-order version of the \acrshort{rk} method, and for the \acrshort{tov} evolution, we used the fourth-order version. These are set through the \textit{MoL::ODE\_Method} parameter with, respectively, the \textit{"rk2"} and the \textit{"rk4"} keys. \acrlong{rk} methods are \acrfull{tvd} methods up to the third order, while the fourth-order one is not strictly \acrshort{tvd}.
+
+\subsection{GRHydro}
+
+In the previous exercises, the choice of the reconstruction method and the Riemann solver was controlled by the \textit{GRHydro} thorn settings. Here we briefly explain what we used.
+
+\subsubsection{Reconstruction}
+
+The reconstruction method is the way the code reconstructs the solution in each numerical cell. For example, the simplest reconstruction one can make is using piecewise constant functions, but more precise methods are usually preferred.
+
+For the Sod problem we used the slope-limited \acrshort{tvd} method, set by the \textit{"tvd"} key for the \textit{GRHydro::recon\_method} parameter. It is also possible to change the sloper limiter to be used by setting the \textit{GRHydro::tvd\_limiter} parameter; in our case, we kept the default value of \textit{"minmod"}. In the \acrshort{tov} exercise, we used the \acrfull{ppm}. This is a more complex and advanced method that uses parabolic functions to reconstruct the solution inside the cells. In this case, the method directly implements monotonicity conservation.
+
+\subsubsection{Riemann solver}
+
+Given the reconstructed data, we need the flux at the cell interfaces in order to advance the solution in time. This is done by solving the Riemann problems at the interfaces. One possibility may be to solve the problem exactly, but this can be very computationally expensive. That's why approximate solvers have been developed.
+
+As already discussed in Section \ref{sec:sod_main}, for the Sod exercise, we used the HLLE solver. This is controlled by the \textit{GRHydro::riemann\_solver} parameter using the \textit{"HLLE"} key. For the \acrshort{tov} exercise, we set that parameter to \textit{"Marquina"}, meaning that we used the Marquina solver.
+
+Different solvers approximate the flux at the cell interfaces differently. In general, the choice of the Riemann solver to use is problem-dependent based on the properties of the system we are interested in.
+
+\subsection{McLachlan BSSN}
+
+The \textit{ML\_BSSN} thorn controls some of the parameters regarding the BSSN (Baumgarte-Shapiro-Shibata-Nakamura) 3+1 formulation of spacetime. We will focus on the parameters that regulate the foliation of spacetime.
+
+A correct foliation is important to avoid the numerical simulation crashing due to a steep change in the metric. The foliation technique should have the following properties:
+
+\begin{itemize}
+    \item The formation of singularities should be avoided.
+    \item Coordinate distortions should be counteracted.
+    \item It should not be computationally expensive.
+\end{itemize}
+
+\noindent
+Those properties can be achieved with a smart choice of the \underline{lapse} factor and the \underline{shift} vector.
+
+\subsubsection{Hyperbolic K-Driver Slicing Condition}
+
+The \textit{ML\_BSSN::harmonicF} and the \textit{ML\_BSSN::harmonicN} parameters are for the Hyperbolic K-Driver Slicing Condition, which determines the evolution of the \underline{lapse} factor \(\alpha\). The condition reads:
+
+\begin{equation} \label{eq:hk-dsc_bssn}
+    (\partial_t - \beta^i \partial_i) \alpha = - f(\alpha) \alpha^2 (K - K_0)
+\end{equation}
+
+\noindent
+where \(\beta\) is the \underline{shift} vector, \(K\) is the trace of the extrinsic curvature of the 3-metric, \(K_0\) is its initial value, and \(f(\alpha)\) is a function of the lapse. However, in the thorn, Equation \ref{eq:hk-dsc_bssn} is implemented as:
+
+\begin{equation} \label{eq:hk-dsc_thorn}
+    \partial_t \alpha = - f \alpha^n K
+\end{equation}
+
+\noindent
+where \(f\) is a real number and \(n\) is an integer power. The parameters mentioned above refer to \(f\) and \(n\) in Equation \ref{eq:hk-dsc_thorn}. These have been respectively set to \textit{2.0} and \textit{1}, which is equivalent to taking \(f(\alpha) = 2 / \alpha\) in Equation \ref{eq:hk-dsc_bssn}. This corresponds to the so-called \underline{1 + log} slicing condition, which is a singularity-avoiding slicing condition. If instead we wanted to use the \underline{harmonic} slicing condition \(f(\alpha) = 1\), we'd set \(f = 1\) and \(n = 2\) in Equation \ref{eq:hk-dsc_thorn}.
+
+\subsubsection{Gamma-Driver Shift Condition}
+
+The Gamma-Driver Shift Condition determines the evolution of the \underline{shift} vector \(\beta\). It can be written as a system of \acrshort{pdes}:
+
+\begin{equation} \label{eq:g-dsc_bssn}
+    \begin{cases}
+        \partial_t \beta^i - \beta^j \partial_j \beta^i = \frac{3}{4} B^i\\
+        \partial_t B^i - \beta^j \partial_j B^i = \partial_t \tilde{\Gamma}^i - \beta^j \partial_j \tilde{\Gamma}^i - \eta B^i
+    \end{cases}
+\end{equation}
+
+\noindent
+where \(\eta\) is a constant, \(B^i = \partial_t \beta^i\), \(\tilde{\Gamma}^i = \partial_j \tilde{\gamma}^{ij}\), and \(\tilde{\gamma}^{ij}\) is the conformal 3-metric, which is a rescaling of \(\gamma^{ij}\) such that \(\det(\tilde{\gamma}^{ij}) = 1\).
+
+The \textit{ML\_BSSN::ShiftGammaCoeff} and the \textit{ML\_BSSN::BetaDriver} parameters control, respectively, the values of the coefficient of the \(B^i\) term in the first equation of System \ref{eq:g-dsc_bssn}, and of \(\eta\). The coefficient of \(B^i\) in the first equation should not be changed, and therefore the value of the corresponding parameter is set to \textit{0.75} (\(3 / 4\)). The value of the other parameter has been set to \textit{2.66}. There is no mathematical way to decide a priori a good value for \(\eta\). Usually, it is found empirically from numerical simulations. However, a common choice is scaling \(\eta\) based on the total mass, for example using \(\eta = 1 / (2 M)\), where \(M\) is the gravitational mass of the system.
 
 \end{document}

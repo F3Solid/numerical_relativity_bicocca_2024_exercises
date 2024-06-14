@@ -8,7 +8,7 @@
 \usepackage[acronym]{glossaries} % for acronyms
 \usepackage{physics} % Physics symbols
 
-\usepackage{showlabels} % To show equations labels on the PDF. Comment at the end
+% \usepackage{showlabels} % To show equations labels on the PDF. Comment at the end
 
 % Defining acronyms
 \newacronym{aeq}{AE}{Advection Equation}
@@ -24,7 +24,7 @@
 
 \title{Numerical Relativity Homework 1}
 \author{Federico Leto di Priolo}
-\date{May 2024}
+\date{June 2024}
 
 \begin{document}
 
@@ -158,7 +158,7 @@ The aim now is to solve the \acrshort{aeq} replacing the Gaussian profile with a
 
 In order to advance of one step the \acrshort{laxf} method takes the average of the values on the left and on the right of each numerical cell. This is done by the \(\frac{1}{2}(u^n_{j-1} + u^n_{j+1})\) term in Equation \ref{eq:lax-f}. This means that when we apply it to the Step Function the edges of the step get weighted down and a new step is generated. At the next iteration the new steps are treated like the previous one, generating new steps, and so on. This behavior, combined with the strong dissipation of this method, leads to the final solutions in Figure \ref{fig:step_laxf_if_tot}.
 
-Using a high resolution reduces the dissipation (like for the Gaussian profile) and helps to keep the initial shape. A lower resolution or Courant factor instead spreads the steps profile on the wider domain of the individual cells.
+Using a high resolution reduces the dissipation (like for the Gaussian profile) and helps to keep the initial shape. A lower resolution or Courant factor instead spreads and lowers the steps profile.
 
 The evolution of the \(L_2\) norm is the same observed for the Gaussian profile (Figure \ref{fig:step_laxf_l2_tot}).
 

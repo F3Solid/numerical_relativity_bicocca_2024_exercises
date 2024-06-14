@@ -108,8 +108,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/showlabels/showlabels.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/showlabels/showlabels.sty
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.aux
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.aux
 INPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.aux
@@ -148,7 +146,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/bbm/bbm10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/bbm/bbm6.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT /Users/Federico/Documents/Corsi di studio/Università/Numerical Relativity/numerical_relativity_bicocca_2024_exercises/Homework_1/Report/Report_1.pdf
@@ -249,4 +246,3 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
